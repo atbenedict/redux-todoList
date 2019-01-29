@@ -5,9 +5,6 @@ import React from "react";
 import "./Todo.css";
 
 function ToDo(props) {
-  // let dateString = props.task.id;
-  // let created = moment(dateString);
-  // console.log(created);
   return (
     <div
       onClick={() => props.toggleDone(props.task.id)}

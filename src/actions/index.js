@@ -1,22 +1,12 @@
-let nextTodoId = 0;
-export const addTodo = text => ({
-  type: "ADD_TODO",
-  id: nextTodoId++,
-  text
-});
+export const CREATE_TODO = "CREATE_TODO";
+export const TOGGLE_TODO = "TOGGLE_TODO";
 
-export const setVisibilityFilter = filter => ({
-  type: "SET_VISIBILITY_FILTER",
-  filter
-});
+export function createToDo(newToDo) {
+  console.log("action", newToDo);
+  return { type: CREATE_TODO, payload: newToDo };
+}
 
-export const toggleTodo = id => ({
-  type: "TOGGLE_TODO",
-  id
-});
-
-export const VisibilityFilters = {
-  SHOW_ALL: "SHOW_ALL",
-  SHOW_COMPLETED: "SHOW_COMPLETED",
-  SHOW_ACTIVE: "SHOW_ACTIVE"
-};
+export function toggleToDo(toDo) {
+  console.log("action", toDo);
+  return { type: TOGGLE_TODO, payload: toDo };
+}
